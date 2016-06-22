@@ -1,6 +1,134 @@
 
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 
+$BrandPrimary: #3473b5;
+$BrandWhite: #fff;
+$Pink: #e577aa;
+$Blue: #72bbe9;
+$Green: #7abe93;
+$Yellow: #e5b178;
+$Gutter: 1rem;
+$Max-Content-Width: 60rem;
+
 @import 'font-awesome';
 @import 'box-sizing';
 @import 'reset';
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.grid-item {
+  margin: $Gutter * 2;
+  width: 25%;
+}
+.shop-item {
+  border: 0.2rem solid $BrandPrimary;
+  border-bottom: none;
+  text-align: center;
+}
+
+.shirt-div {
+  margin: $Gutter;
+
+  img {
+    width: 100%;
+  }
+}
+
+.shop-item-info {
+  margin: $Gutter;
+}
+
+.shop-item-buttons {
+  font-size: 18pt;
+  display: flex;
+  // border-top: 0.2rem solid $BrandPrimary;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0;
+}
+
+
+.shop-button {
+  color: $BrandPrimary;
+  margin: auto;
+  width: 20%;
+// }
+//
+// .fa {
+width: 100%;
+border: 0.2rem solid $BrandPrimary;
+border-left: none;
+padding: 0.4rem 0;
+  &:hover {
+    background: $BrandPrimary;
+    color: #fff;
+  }
+}
+
+.dropdown__options {
+  display: none;
+  border: 0.2rem solid $BrandPrimary;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover{
+  .dropdown__options{
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  bottom: 2.3rem;
+  }
+}
+.dropdown__options-item {
+  border: 0.2rem solid $BrandPrimary;
+  color: $BrandPrimary;
+
+  &-shirt-color {
+
+      &-pink {
+        color: $Pink; //pink square
+        &:hover {
+          font-size: 22pt;
+        }
+      }
+      &-blue {
+        color: $Blue; //blue square
+        &:hover {
+          font-size: 22pt;
+        }
+      }
+      &-yellow {
+        color: $Yellow; //yellow square
+        &:hover {
+          font-size: 22pt;
+        }
+      }
+      &-green {
+        color: $Green; //green square
+        &:hover {
+          font-size: 22pt;
+        }
+      }
+  }
+
+  &-S:hover { //small hover
+    font-size: 22pt;
+  }
+  &-M:hover { //medium hover
+    font-size: 22pt;
+  }
+  &-L:hover { //large hover
+    font-size: 22pt;
+  }
+  &-XL:hover { //X-large hover
+    font-size: 22pt;
+  }
+}
