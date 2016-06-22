@@ -170,13 +170,43 @@ $Max-Content-Width: 60rem;
 
   .shop-item {
     display: flex;
+    border-bottom: 0.2rem solid $BrandPrimary;
+    border-right: none;
+  }
+
+  .shop-item-description {
+    margin-bottom: 0;
+    margin-right: $Gutter;
+  }
+
+  .shop-button {
+    border-left: 0.2rem solid $BrandPrimary;
+    border-top: 0;
+    padding: 0.4rem 0.2rem;
+  }
+
+  .cart {
+    border-right: 0.2rem solid $BrandPrimary;
+    border-bottom: 0;
   }
 
   .shop-item-buttons {
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     flex-direction: column;
     margin: 0;
+  }
+
+  .dropdown__options {
+    border-bottom: 0.2rem solid $BrandPrimary;
+    border-left: 0;
+  }
+  .dropdown__options-item {
+    border-left: 0.2rem solid $BrandPrimary;
+    border-bottom: 0;
+    padding: 0.2rem 0.4rem;
+    vertical-align: middle;
+    // margin: auto 0;
   }
 
   .dropdown:hover {
@@ -184,15 +214,13 @@ $Max-Content-Width: 60rem;
       background: #fff;
       display: flex;
       flex-direction: row;
-      align-items: flex-end;
-      width: 100%;
+      align-items: stretch;
+      width: auto;
       position: absolute;
       bottom: 0;
-      right: 200%;
+      right: 100%;
     }
   }
-
-
 
 
 }
