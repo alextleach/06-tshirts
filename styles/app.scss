@@ -1,5 +1,226 @@
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-
+$BrandPrimary: #3473b5;
+$BrandWhite: #fff;
+$Pink: #e577aa;
+$Blue: #72bbe9;
+$Green: #7abe93;
+$Yellow: #e5b178;
+$Gutter: 1rem;
+$Max-Content-Width: 60rem;
 @import 'font-awesome';
 @import 'box-sizing';
 @import 'reset';
+
+.outer-container {
+  padding: $Gutter;
+  background: $BrandWhite;
+}
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.grid-item {
+  margin: $Gutter;
+  width: calc(100% / 3 - 1rem - 1rem);
+  min-width: 15rem;
+  flex-grow: 1;
+}
+
+.shop-item {
+  border: 0.2rem solid $BrandPrimary;
+  background: #fff;
+  border-bottom: none;
+  text-align: center;
+}
+
+.shirt-div {
+  margin: $Gutter;
+  img {
+    width: 100%;
+  }
+}
+
+.shop-item-info {
+  margin: $Gutter;
+  color: $BrandPrimary;
+}
+
+.shop-item-description {
+  margin-bottom: $Gutter * 2;
+}
+
+.shop-item-buttons {
+  font-size: 18pt;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.shop-button {
+  color: $BrandPrimary;
+  margin: auto;
+  width: 100%;
+  border: 0.2rem solid $BrandPrimary;
+  border-left: none;
+  padding: 0.4rem 0;
+  &:hover {
+    background: $BrandPrimary;
+    color: #fff;
+  }
+}
+
+.cart {
+  border-right: 0;
+}
+
+.dropdown__options {
+  display: none;
+  border: 0.2rem solid $BrandPrimary;
+  border-bottom: none;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover {
+  .dropdown__options {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    bottom: 100%;
+  }
+}
+
+.dropdown__options-item {
+  border-bottom: 0.2rem solid $BrandPrimary;
+  color: $BrandPrimary;
+  &-shirt-color {
+    &-pink {
+      color: $Pink; //pink square
+      &:hover {
+        font-size: 24pt;
+      }
+    }
+    &-blue {
+      color: $Blue; //blue square
+      &:hover {
+        font-size: 24pt;
+      }
+    }
+    &-yellow {
+      color: $Yellow; //yellow square
+      &:hover {
+        font-size: 24pt;
+      }
+    }
+    &-green {
+      color: $Green; //green square
+      &:hover {
+        font-size: 24pt;
+      }
+    }
+  }
+  &-s:hover {
+    //small hover
+    font-size: 24pt;
+  }
+  &-m:hover {
+    //medium hover
+    font-size: 24pt;
+  }
+  &-l:hover {
+    //large hover
+    font-size: 24pt;
+  }
+  &-xl:hover {
+    //X-large hover
+    font-size: 24pt;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 980px) {
+
+  .container {
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .grid-item {
+    margin: $Gutter;
+    width: 40%;
+    min-width: 30rem;
+    flex-grow: 1;
+  }
+
+  .shop-item {
+    display: flex;
+    border-bottom: 0.2rem solid $BrandPrimary;
+    border-right: none;
+  }
+
+  .shop-item-description {
+    margin-bottom: 0;
+    margin-right: $Gutter;
+  }
+
+  .shop-button {
+    border-left: 0.2rem solid $BrandPrimary;
+    border-top: 0;
+    padding: 0.4rem 0.2rem;
+  }
+
+  .cart {
+    border-right: 0.2rem solid $BrandPrimary;
+    border-bottom: 0;
+  }
+
+  .shop-item-buttons {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .dropdown__options {
+    border-bottom: 0.2rem solid $BrandPrimary;
+    border-left: 0;
+  }
+  .dropdown__options-item {
+    border-left: 0.2rem solid $BrandPrimary;
+    border-bottom: 0;
+    padding: 0.2rem 0.4rem;
+    vertical-align: middle;
+    // margin: auto 0;
+  }
+
+  .dropdown:hover {
+    .dropdown__options {
+      background: #fff;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      width: auto;
+      position: absolute;
+      bottom: 0;
+      right: 100%;
+    }
+  }
+
+
+}
